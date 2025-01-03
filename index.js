@@ -22,17 +22,10 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
+(async ()=>{
 const querySnapshot = await getDocs(collection(db, "vehicle"));
 querySnapshot.forEach((doc) => {
     console.log("bro1");
     console.log(`${doc.id} => ${doc.data()}`);
 });
-
-document.addEventListener("DOMContentLoaded", async function() {
-    console.log("bro2");
-    querySnapshot = await getDocs(collection(db, "vehicle"));
-    querySnapshot.forEach((doc) => {
-    console.log("bro2");
-    console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
+})
