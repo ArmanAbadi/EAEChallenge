@@ -24,3 +24,10 @@ const querySnapshot = await getDocs(collection(db, "vehicle"));
 querySnapshot.forEach((doc) => {
   console.log(`${doc.id} => ${doc.data()}`);
 });
+
+document.addEventListener("DOMContentLoaded", async function() {
+    querySnapshot = await getDocs(collection(db, "vehicle"));
+    querySnapshot.forEach((doc) => {
+    console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
