@@ -22,12 +22,14 @@ const db = getFirestore(app);
 
 const querySnapshot = await getDocs(collection(db, "vehicle"));
 querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
+    console.log("bro1");
+    console.log(`${doc.id} => ${doc.data()}`);
 });
 
 document.addEventListener("DOMContentLoaded", async function() {
     querySnapshot = await getDocs(collection(db, "vehicle"));
     querySnapshot.forEach((doc) => {
+    console.log("bro2");
     console.log(`${doc.id} => ${doc.data()}`);
     });
 });
