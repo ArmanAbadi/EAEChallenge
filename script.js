@@ -27,6 +27,7 @@ querySnapshot.forEach((doc) => {
 });
 
 document.addEventListener("DOMContentLoaded", async function() {
+    console.log("bro2");
     querySnapshot = await getDocs(collection(db, "vehicle"));
     querySnapshot.forEach((doc) => {
     console.log("bro2");
